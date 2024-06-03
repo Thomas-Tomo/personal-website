@@ -27,7 +27,9 @@ function Header() {
             <NavLink to="/about" className="nav-link">
               About
             </NavLink>{" "}
-            <Nav.Link href="#link4">Contact</Nav.Link>
+            <NavLink to="/contact" className="nav-link">
+              Contact
+            </NavLink>{" "}
           </Nav>
         </Navbar.Collapse>
       </Container>
