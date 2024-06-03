@@ -31,7 +31,7 @@ const Projects = () => {
           ].includes(repo.name)
         );
 
-        // Fetch details for each repository (star count and commit count)
+        // Fetch details for each repository (star count, commit count, and languages)
         const reposWithDetails = await Promise.all(
           filteredRepos.map(async (repo) => {
             const starCount = await fetchStarCount(repo.owner.login, repo.name);
@@ -39,7 +39,8 @@ const Projects = () => {
               repo.owner.login,
               repo.name
             );
-            return { ...repo, starCount, commitCount };
+            const languages = await fetchLanguages(repo.owner.login, repo.name);
+            return { ...repo, starCount, commitCount, languages };
           })
         );
 
@@ -100,6 +101,23 @@ const Projects = () => {
     }
   };
 
+  const fetchLanguages = async (owner, repoName) => {
+    try {
+      const response = await axios.get(
+        `https://api.github.com/repos/${owner}/${repoName}/languages`,
+        {
+          headers: {
+            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching languages: ", error);
+      return {};
+    }
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>Projects</h1>
@@ -108,18 +126,20 @@ const Projects = () => {
           <Col key={repo.id}>
             <Card className={styles.card}>
               <Card.Body className={styles.cardBody}>
-                <Card.Title className={styles.cardTitle}>
-                  {repo.name}
-                </Card.Title>
-                <Card.Text className={styles.cardText}>
+                <Card.Title>{repo.name}</Card.Title>
+                <Card.Text>
                   <strong>Description:</strong>{" "}
                   {repo.description || "No description provided"}
                 </Card.Text>
-                <Card.Text className={styles.cardText}>
+                <Card.Text>
                   <strong>Stars:</strong> {repo.starCount}
                 </Card.Text>
-                <Card.Text className={styles.cardText}>
+                <Card.Text>
                   <strong>Commits:</strong> {repo.commitCount}
+                </Card.Text>
+                <Card.Text>
+                  <strong>Languages:</strong>{" "}
+                  {Object.keys(repo.languages).join(", ")}
                 </Card.Text>
                 <Button
                   variant="outline-light"
