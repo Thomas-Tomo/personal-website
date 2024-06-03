@@ -13,23 +13,23 @@ function Header() {
     >
       <Container fluid>
         <NavLink to="/" className="navbar-brand me-auto">
-          Thomas
+          Thomas-Tomo Domitrovic
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <NavLink to="/" className="nav-link">
               Home
-            </NavLink>{" "}
+            </NavLink>
             <NavLink to="/projects" className="nav-link">
               Projects
-            </NavLink>{" "}
+            </NavLink>
             <NavLink to="/about" className="nav-link">
               About
-            </NavLink>{" "}
+            </NavLink>
             <NavLink to="/contact" className="nav-link">
               Contact
-            </NavLink>{" "}
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
