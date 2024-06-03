@@ -1,0 +1,18 @@
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  background-color: #020302;
+}
+
+.text p {
+  font-size: 1.2em; /* Larger font size for paragraphs */
+}
+
+.image img {
+  border-radius: 5px; /* Rounded corners for image */
+}
+
+Button {
+  width: 50%;
+}
