@@ -1,0 +1,32 @@
+.header {
+  background-color: #020302;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: white; /* Set the color of the brand text */
+}
+
+.brand:hover {
+  color: white;
+}
+
+.navLink {
+  color: white; /* Set the default color of the navigation links */
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #17a2b8; /* Set the hover color of the navigation links */
+}
+
+.navLink:active,
+.navLink:visited,
+.brand:active,
+.brand:visited {
+  color: white; /* Maintain the same color when the link is clicked or visited */
+}
