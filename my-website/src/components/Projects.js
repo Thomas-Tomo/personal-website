@@ -20,7 +20,7 @@ const Projects = () => {
 
         // Filter out only the repositories that you want to display
         const filteredRepos = response.data.filter((repo) =>
-          ["devexchange", "the_fork_awakens", "Lunar-Escape"].includes(
+          ["devexchange", "the_fork_awakens", "Lunar-Escape", "charades", "woodland-whispers-retreat", "hangman", "capital-cities"].includes(
             repo.name
           )
         );
@@ -95,8 +95,8 @@ const Projects = () => {
   };
 
   return (
-    <div className={styles.color}>
-      <h1 className={styles.h1}>Notable Projects</h1>
+    <div className={styles.container}>
+      <h1 className={styles.h1}>Projects</h1>
       <Row xs={1} md={2} lg={3} className="g-4">
         {selectedRepos.map((repo) => (
           <Col key={repo.id}>

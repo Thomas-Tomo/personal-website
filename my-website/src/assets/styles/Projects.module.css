@@ -1,23 +1,32 @@
-.color {
+.container {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardBody {
     background-color: black;
     color: white;
-    padding: 20px;
-  }
-  
-  .h1 {
-    text-align: center;
-    color: white;
-  }
-  
-  .card {
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .cardBody {
-    background-color: black;
-    color: white;
-  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
