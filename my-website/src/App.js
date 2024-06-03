@@ -6,6 +6,7 @@ import styles from "./App.module.css";
 import MainContent from "./components/MainContent";
 import Projects from "./components/Projects"; // Import Projects component
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Container>
