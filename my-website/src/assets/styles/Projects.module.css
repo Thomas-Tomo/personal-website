@@ -9,6 +9,10 @@
   margin-bottom: 40px;
 }
 
+.cardTitle {
+    font-size: 2rem;
+}
+
 .card {
   transition: transform 0.2s;
   display: flex;

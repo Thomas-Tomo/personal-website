@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Button } from "react-bootstrap";
 import styles from "../assets/styles/Projects.module.css";
 
 const Projects = () => {
@@ -20,9 +20,15 @@ const Projects = () => {
 
         // Filter out only the repositories that you want to display
         const filteredRepos = response.data.filter((repo) =>
-          ["devexchange", "the_fork_awakens", "Lunar-Escape", "charades", "woodland-whispers-retreat", "hangman", "capital-cities"].includes(
-            repo.name
-          )
+          [
+            "devexchange",
+            "the_fork_awakens",
+            "Lunar-Escape",
+            "charades",
+            "woodland-whispers-retreat",
+            "hangman",
+            "capital-cities",
+          ].includes(repo.name)
         );
 
         // Fetch details for each repository (star count and commit count)
@@ -102,12 +108,28 @@ const Projects = () => {
           <Col key={repo.id}>
             <Card className={styles.card}>
               <Card.Body className={styles.cardBody}>
-                <Card.Title>{repo.name}</Card.Title>
-                <Card.Text>
-                  Description: {repo.description || "No description provided"}
+                <Card.Title className={styles.cardTitle}>
+                  {repo.name}
+                </Card.Title>
+                <Card.Text className={styles.cardText}>
+                  <strong>Description:</strong>{" "}
+                  {repo.description || "No description provided"}
                 </Card.Text>
-                <Card.Text>Stars: {repo.starCount}</Card.Text>
-                <Card.Text>Commits: {repo.commitCount}</Card.Text>
+                <Card.Text className={styles.cardText}>
+                  <strong>Stars:</strong> {repo.starCount}
+                </Card.Text>
+                <Card.Text className={styles.cardText}>
+                  <strong>Commits:</strong> {repo.commitCount}
+                </Card.Text>
+                <Button
+                  variant="outline-light"
+                  className="mt-3"
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </Button>
               </Card.Body>
             </Card>
           </Col>
