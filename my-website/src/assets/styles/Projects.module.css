@@ -1,0 +1,23 @@
+.color {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+  
+  .h1 {
+    text-align: center;
+    color: white;
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cardBody {
+    background-color: black;
+    color: white;
+  }
