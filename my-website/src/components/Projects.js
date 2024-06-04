@@ -31,7 +31,7 @@ const Projects = () => {
           ].includes(repo.name)
         );
 
-        // Fetch details for each repository (star count, commit count, and languages)
+        // Fetch details for each repository (star count, commit count, languages, and homepage)
         const reposWithDetails = await Promise.all(
           filteredRepos.map(async (repo) => {
             const starCount = await fetchStarCount(repo.owner.login, repo.name);
@@ -141,15 +141,26 @@ const Projects = () => {
                   <strong>Languages:</strong>{" "}
                   {Object.keys(repo.languages).join(", ")}
                 </Card.Text>
-                <Button
-                  variant="outline-light"
-                  className="mt-3"
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View on GitHub
-                </Button>
+                <div className={styles.buttonsContainer}>
+                  <Button
+                    variant="outline-light"
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View on GitHub
+                  </Button>
+                  {repo.homepage && (
+                    <Button
+                      variant="outline-light"
+                      href={repo.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Live Site
+                    </Button>
+                  )}
+                </div>
               </Card.Body>
             </Card>
           </Col>
