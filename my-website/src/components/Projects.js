@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, Row, Col, Button } from "react-bootstrap";
 import styles from "../assets/styles/Projects.module.css";
-import Loader from "../utils/Spinner";
+import Loader from "../utils/Loader";
 import {
   fetchRepos,
   fetchStarCount,
