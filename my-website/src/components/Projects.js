@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Card, Row, Col, Button, Spinner } from "react-bootstrap";
+import { Card, Row, Col, Button } from "react-bootstrap";
 import styles from "../assets/styles/Projects.module.css";
+import Loader from "../utils/Spinner";
 import {
   fetchRepos,
   fetchStarCount,
@@ -51,11 +52,7 @@ const Projects = () => {
     <div className={styles.container}>
       <h1 className={styles.h1}>Projects</h1>
       {loading ? (
-        <div className="d-flex justify-content-center">
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        </div>
+        <Loader />
       ) : (
         <Row xs={1} md={2} lg={3} className="g-4">
           {selectedRepos.map((repo) => (
