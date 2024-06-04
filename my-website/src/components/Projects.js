@@ -18,7 +18,7 @@ const Projects = () => {
           },
         });
 
-        // Filter out only the repositories that you want to display
+        // Filter out only the repositories I want to display
         const filteredRepos = response.data.filter((repo) =>
           [
             "devexchange",
@@ -43,6 +43,9 @@ const Projects = () => {
             return { ...repo, starCount, commitCount, languages };
           })
         );
+
+        // Sort repositories by commit count in descending order
+        reposWithDetails.sort((a, b) => b.commitCount - a.commitCount);
 
         setSelectedRepos(reposWithDetails);
       } catch (error) {
