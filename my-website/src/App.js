@@ -11,16 +11,18 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <Container fluid className={styles.appContainer}>
+    <div className="appWrapper">
       <Header />
-      <Routes>
-        <Route path="/" element={<MainContent />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Container fluid className={styles.appContainer}>
+        <Routes>
+          <Route path="/" element={<MainContent />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Container>
       <Footer />
-    </Container>
+    </div>
   );
 }
 
