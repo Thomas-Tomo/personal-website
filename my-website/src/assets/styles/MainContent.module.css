@@ -6,13 +6,31 @@
 }
 
 .text p {
-  font-size: 1.2em; /* Larger font size for paragraphs */
+  font-size: 1.2em;
 }
 
-.image img {
-  border-radius: 5px; /* Rounded corners for image */
+.text h2 {
+  font-size: 2em;
 }
 
-Button {
+button {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .text p {
+    font-size: 0.8em;
+  }
+
+  .text h2 {
+    font-size: 1em;
+  }
+
+  .image img {
+    width: 80%;
+  }
+
+  button {
+    width: 50%;
+  }
 }
