@@ -6,18 +6,20 @@ import styles from "../assets/styles/Header.module.css";
 function Header() {
   return (
     <Navbar
-      expand="lg"
+      expand="md"
       sticky="top"
       variant="dark"
       className={styles.customNavbar}
     >
       <Container fluid>
-        <NavLink to="/" className="navbar-brand me-auto">
-          Thomas-Tomo Domitrovic
-        </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        <div className="d-flex justify-content-between align-items-center">
+          <NavLink to="/" className="navbar-brand">
+            Thomas-Tomo Domitrovic
+          </NavLink>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" />
+        </div>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav>
             <NavLink to="/" className="nav-link">
               Home
             </NavLink>
