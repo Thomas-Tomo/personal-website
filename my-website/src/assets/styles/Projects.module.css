@@ -58,7 +58,6 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #333333;
-  border: none !important; /* Removes the default border */
   border-radius: 10px; /* Optional: adds rounded corners */
   padding: 20px;
   overflow: hidden; /* Ensures pseudo-elements do not overflow */
@@ -106,7 +105,6 @@
 }
 
 button {
-  border: none !important; /* Removes the default border on buttons */
   background: rgba(255, 255, 255, 0.1); /* Transparent button background */
   color: white;
   transition: background 0.2s;
