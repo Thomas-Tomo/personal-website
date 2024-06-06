@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Card, Row, Col, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
 import styles from "../assets/styles/Projects.module.css";
 import Loader from "../utils/Loader";
 import {
@@ -13,7 +12,6 @@ import {
 const Projects = () => {
   const [selectedRepos, setSelectedRepos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,16 +48,6 @@ const Projects = () => {
     fetchData();
   }, []);
 
-  // Function to handle navigation to GitHub repository
-  const handleGitHubClick = (url) => {
-    window.open(url, "_blank");
-  };
-
-  // Function to handle navigation to live site
-  const handleLiveSiteClick = (url) => {
-    window.open(url, "_blank");
-  };
-
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>Projects</h1>
@@ -89,14 +77,18 @@ const Projects = () => {
                   <div className={styles.buttonsContainer}>
                     <Button
                       variant="outline-light"
-                      onClick={() => handleGitHubClick(repo.html_url)} // Call handleGitHubClick with repository URL
+                      href={repo.html_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       View on GitHub
                     </Button>
                     {repo.homepage && (
                       <Button
                         variant="outline-light"
-                        onClick={() => handleLiveSiteClick(repo.homepage)} // Call handleLiveSiteClick with live site URL
+                        href={repo.homepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         View Live Site
                       </Button>
