@@ -25,6 +25,15 @@ function Footer() {
               <i className="fab fa-github"></i>
             </a>
           </Col>
+          <Col>
+            <a
+              href="https://x.com/ThomasD46040"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </Col>
         </Row>
       </Container>
     </footer>
