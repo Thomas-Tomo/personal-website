@@ -31,7 +31,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fa-brands fa-x-twitter"></i>
+              <i className="fa-brands fa-x-twitter"></i>
             </a>
           </Col>
         </Row>
