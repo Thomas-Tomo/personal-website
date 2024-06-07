@@ -9,6 +9,31 @@ import {
   fetchLanguages,
 } from "../utils/githubApi";
 
+// Import images
+import devexchangeImg from "../assets/images/devexchange.png";
+import theForkAwakensImg from "../assets/images/the_fork_awakens.png";
+import lunarEscapeImg from "../assets/images/lunar_escape.png";
+import charadesImg from "../assets/images/charades.png";
+import woodlandWhispersRetreatImg from "../assets/images/woodland_whispers_retreat.png";
+import hangmanImg from "../assets/images/hangman.png";
+import capitalCitiesImg from "../assets/images/capital_cities.png";
+
+// Map GitHub repository names to image imports
+const projectImageMap = {
+  devexchange: devexchangeImg,
+  the_fork_awakens: theForkAwakensImg,
+  "Lunar-Escape": lunarEscapeImg,
+  charades: charadesImg,
+  "woodland-whispers-retreat": woodlandWhispersRetreatImg,
+  hangman: hangmanImg,
+  "capital-cities": capitalCitiesImg,
+};
+
+// Function to get image by project name
+const getImageForProject = (projectName) => {
+  return projectImageMap[projectName];
+};
+
 const Projects = () => {
   const [selectedRepos, setSelectedRepos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -58,6 +83,7 @@ const Projects = () => {
           {selectedRepos.map((repo) => (
             <Col key={repo.id}>
               <Card className={styles.card}>
+                <Card.Img variant="top" src={getImageForProject(repo.name)} />
                 <Card.Body className={styles.cardBody}>
                   <Card.Title>{repo.name}</Card.Title>
                   <Card.Text>
