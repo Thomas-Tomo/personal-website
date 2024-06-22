@@ -1,0 +1,120 @@
+.container {
+  background-color: black; /* Fallback color for older browsers */
+  color: white;
+  padding: 20px;
+  animation: smoothDarkGradientBackground 30s ease infinite;
+  background-size: 400% 400%;
+  min-height: 100vh; /* Ensures the container takes up the full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes smoothDarkGradientBackground {
+  0% {
+    background: linear-gradient(
+      135deg,
+      #000000,
+      #0a0a0a,
+      #141414,
+      #1e1e1e,
+      #282828
+    );
+    background-position: 0% 50%;
+  }
+  50% {
+    background: linear-gradient(
+      135deg,
+      #282828,
+      #1e1e1e,
+      #141414,
+      #0a0a0a,
+      #000000
+    );
+    background-position: 100% 50%;
+  }
+  100% {
+    background: linear-gradient(
+      135deg,
+      #000000,
+      #0a0a0a,
+      #141414,
+      #1e1e1e,
+      #282828
+    );
+    background-position: 0% 50%;
+  }
+}
+
+.h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cardBody label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.cardBody input,
+.cardBody textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #222;
+  color: white;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.cardBody input:focus,
+.cardBody textarea:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #444;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #555;
+}
+
+.whatsappButton {
+  background: #25d366;
+}
+
+.whatsappButton:hover {
+  background: #1da851;
+}
