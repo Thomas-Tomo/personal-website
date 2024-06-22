@@ -52,6 +52,11 @@
   margin-bottom: 40px;
 }
 
+.h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .card {
   background-color: #333;
   border-radius: 10px;
@@ -94,10 +99,11 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+  align-items: center; /* Center items horizontally */
 }
 
 button {
-  padding: 10px;
+  padding: 10px 20px; /* Adjust padding for better appearance */
   border: none;
   border-radius: 5px;
   background: #444;
@@ -111,10 +117,33 @@ button:hover {
   background: #555;
 }
 
+.whatsappContainer {
+  margin-bottom: 40px;
+  text-align: center;
+  width: 80%;
+}
+
+.whatsappMessage {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
 .whatsappButton {
-  background: #25d366;
+  border: 2px solid #25d366;
+  color: #25d366;
+  background: transparent;
+  font-size: 1.1rem;
+  padding: 10px 20px; /* Adjust padding for better appearance */
 }
 
 .whatsappButton:hover {
-  background: #1da851;
+  background: #25d366;
+  color: white;
+}
+
+.emailContainer {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
