@@ -32,7 +32,7 @@ function MainContent() {
           </Link>
           <Button
             variant="outline-success"
-            className={`${styles.contact} ${styles.button}`}
+            className={`${styles.button}`}
             onClick={() =>
               window.open("https://wa.me/3530879735102", "_blank")
             }

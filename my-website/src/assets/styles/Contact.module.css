@@ -1,10 +1,10 @@
 .container {
-  background-color: black; /* Fallback color for older browsers */
+  background-color: black;
   color: white;
   padding: 20px;
   animation: smoothDarkGradientBackground 30s ease infinite;
   background-size: 400% 400%;
-  min-height: 100vh; /* Ensures the container takes up the full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,13 +72,18 @@
   gap: 15px;
 }
 
-.cardBody label {
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
-.cardBody input,
-.cardBody textarea {
+.inputField,
+.textareaField {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #555;
@@ -88,39 +93,41 @@
   font-size: 1rem;
 }
 
-.cardBody input:focus,
-.cardBody textarea:focus {
+.inputField:focus,
+.textareaField:focus {
   border-color: #999;
   outline: none;
 }
 
 .buttonsContainer {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
   margin-top: 20px;
-  align-items: center; /* Center items horizontally */
 }
 
-button {
-  padding: 10px 20px; /* Adjust padding for better appearance */
+.button {
+  width: 100%;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background: #444;
-  color: white;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-button:hover {
-  background: #555;
+.button:hover {
+  opacity: 0.8;
 }
 
 .whatsappContainer {
   margin-bottom: 40px;
   text-align: center;
-  width: 80%;
+  width: 40%;
+}
+
+.buttonwhap {
+  width: 100%; /* Ensure both buttons are full width */
+  padding: 10px 0; /* Adjust padding as needed */
 }
 
 .whatsappMessage {
@@ -129,21 +136,23 @@ button:hover {
   margin-bottom: 15px;
 }
 
-.whatsappButton {
-  border: 2px solid #25d366;
-  color: #25d366;
-  background: transparent;
-  font-size: 1.1rem;
-  padding: 10px 20px; /* Adjust padding for better appearance */
-}
-
-.whatsappButton:hover {
-  background: #25d366;
-  color: white;
-}
-
 .emailContainer {
   width: 100%;
   max-width: 500px;
   text-align: center;
+}
+
+.submitButton {
+  margin-top: 10px;
+  background: none;
+  color: white;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 768px) {
+  .whatsappContainer {
+    margin-bottom: 40px;
+    text-align: center;
+    width: 70%;
+  }
 }
