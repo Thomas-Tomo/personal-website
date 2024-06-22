@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styles from "../assets/styles/MainContent.module.css";
 import image from "../assets/images/me.png";
 
@@ -24,9 +25,11 @@ function MainContent() {
             Unlocking the power of technology to drive your business forward is
             my mission.
           </h2>
-          <Button variant="outline-light" className="mt-3">
-            Contact Me
-          </Button>
+          <Link to="/contact">
+            <Button variant="outline-light" className={styles.contact}>
+              Contact Me
+            </Button>
+          </Link>
         </Col>
       </Row>
     </Container>

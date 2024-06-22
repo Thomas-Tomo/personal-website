@@ -13,8 +13,9 @@
   font-size: 2em;
 }
 
-button {
-  width: 50%;
+.contact {
+  width: 100%;
+  padding: 5px 100px;
 }
 
 @media (max-width: 768px) {
@@ -28,5 +29,9 @@ button {
 
   .image img {
     width: 80%;
+  }
+
+  .contact {
+    padding: 5px 50px;
   }
 }
