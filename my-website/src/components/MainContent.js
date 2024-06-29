@@ -26,18 +26,31 @@ function MainContent() {
             my mission.
           </h2>
           <Link to="/contact" className={styles.buttonLink}>
-            <Button variant="outline-light" className={`${styles.contact} ${styles.button}`}>
+            <Button
+              variant="outline-light"
+              className={`${styles.contact} ${styles.button}`}
+            >
               Contact Me
             </Button>
           </Link>
           <Button
             variant="outline-success"
             className={`${styles.button}`}
-            onClick={() =>
-              window.open("https://wa.me/3530879735102", "_blank")
-            }
+            onClick={() => window.open("https://wa.me/3530879735102", "_blank")}
           >
             Send WhatsApp Message
+          </Button>
+          <Button
+            variant="outline-primary"
+            className={`${styles.button} mt-3`}
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/thomasdomitrovic/",
+                "_blank"
+              )
+            }
+          >
+            LinkedIn Profile
           </Button>
         </Col>
       </Row>
