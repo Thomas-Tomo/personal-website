@@ -20,10 +20,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        process.env.REACT_APP_EMAILJS_USER_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         e.target,
-        "YOUR_USER_ID"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -52,14 +52,12 @@ const Contact = () => {
           collaborate!
         </p>
         <Button
-            variant="outline-success"
-            className={styles.buttonwhap}
-            onClick={() =>
-              window.open("https://wa.me/3530879735102", "_blank")
-            }
-          >
-            Send WhatsApp Message
-          </Button>
+          variant="outline-success"
+          className={styles.buttonwhap}
+          onClick={() => window.open("https://wa.me/3530879735102", "_blank")}
+        >
+          Send WhatsApp Message
+        </Button>
       </div>
 
       <div className={styles.emailContainer}>
@@ -99,7 +97,11 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className={styles.buttonsContainer}>
-              <Button type="submit" variant="outline-light" className={`${styles.button} ${styles.submitButton}`}>
+              <Button
+                type="submit"
+                variant="outline-light"
+                className={`${styles.button} ${styles.submitButton}`}
+              >
                 Send Email
               </Button>
             </div>
