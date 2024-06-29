@@ -1,0 +1,36 @@
+.container {
+    padding: 40px 0;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .subHeading {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .aboutText {
+    text-align: center;
+  }
+  
+  .skillCard {
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: #f8f9fa;
+    border: none;
+  }
+  
+  .cardBody {
+    padding: 20px;
+  }
+  
+  .skillTitle {
+    text-align: center;
+    font-size: 18px;
+  }
+  
