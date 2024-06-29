@@ -126,7 +126,7 @@
 }
 
 .buttonwhap {
-  width: 100%; /* Ensure both buttons are full width */
+  width: 50%; /* Ensure both buttons are full width */
   padding: 10px 0; /* Adjust padding as needed */
 }
 
@@ -154,5 +154,11 @@
     margin-bottom: 40px;
     text-align: center;
     width: 70%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .buttonwhap {
+    width: 100%;
   }
 }
