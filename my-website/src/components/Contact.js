@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Button } from "react-bootstrap";
+import EmailAlert from "../utils/EmailAlert";
 import styles from "../assets/styles/Contact.module.css";
 
 const Contact = () => {
@@ -9,6 +10,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [notification, setNotification] = useState({ message: "", type: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,9 +30,17 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setNotification({
+            message: "Email sent successfully!",
+            type: "success",
+          });
         },
         (error) => {
           console.log(error.text);
+          setNotification({
+            message: "Failed to send email. Please try again later.",
+            type: "danger",
+          });
         }
       );
 
@@ -39,6 +49,10 @@ const Contact = () => {
       email: "",
       message: "",
     });
+  };
+
+  const clearNotification = () => {
+    setNotification({ message: "", type: "" });
   };
 
   return (
@@ -62,6 +76,10 @@ const Contact = () => {
 
       <div className={styles.emailContainer}>
         <h2 className={styles.h2}>Send me an Email</h2>
+        <EmailAlert
+          notification={notification}
+          clearNotification={clearNotification}
+        />
         <div className={styles.card}>
           <form className={styles.cardBody} onSubmit={sendEmail}>
             <div className={styles.formGroup}>
