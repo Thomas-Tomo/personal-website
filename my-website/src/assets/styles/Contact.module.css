@@ -4,7 +4,6 @@
   padding: 20px;
   animation: smoothDarkGradientBackground 30s ease infinite;
   background-size: 400% 400%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,8 +125,8 @@
 }
 
 .buttonwhap {
-  width: 50%; /* Ensure both buttons are full width */
-  padding: 10px 0; /* Adjust padding as needed */
+  width: 50%;
+  padding: 10px 0;
 }
 
 .whatsappMessage {
