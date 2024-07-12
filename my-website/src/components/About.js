@@ -47,7 +47,7 @@ const About = () => {
       <h2 className={styles.subHeading}>Top Skills</h2>
       <Row className="justify-content-center">
         {skills.map((skill, index) => (
-          <Col key={index} xs={3} md={3} className={styles.skillCard}>
+          <Col key={index} xs={6} md={3} className={styles.skillCard}>
             <Card className={styles.card}>
               <Card.Body className={styles.cardBody}>
                 <Card.Title className={styles.skillTitle}>{skill}</Card.Title>
