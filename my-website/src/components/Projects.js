@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Card, Row, Col, Button } from "react-bootstrap";
 import styles from "../assets/styles/Projects.module.css";
 import Loader from "../utils/Loader";
@@ -75,6 +76,13 @@ const Projects = () => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.thomasdomitrovic.com/projects"
+        />
+      </Helmet>
+
       <h1 className={styles.h1}>Projects</h1>
       {loading ? (
         <Loader />

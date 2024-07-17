@@ -1,12 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import styles from "../assets/styles/MainContent.module.css";
 import image from "../assets/images/me.png";
 
 function MainContent() {
   return (
     <Container>
+      <Helmet>
+        <link rel="canonical" href="https://www.thomasdomitrovic.com/" />
+      </Helmet>
       <Row className={styles.mainContent}>
         <Col
           md={6}

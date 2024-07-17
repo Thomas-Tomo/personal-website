@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 import { Button } from "react-bootstrap";
 import EmailAlert from "../utils/EmailAlert";
@@ -57,6 +58,9 @@ const Contact = () => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <link rel="canonical" href="https://www.thomasdomitrovic.com/contact" />
+      </Helmet>
       <h1 className={styles.h1}>Contact Me</h1>
 
       <div className={styles.whatsappContainer}>

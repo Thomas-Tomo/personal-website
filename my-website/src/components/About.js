@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import styles from "../assets/styles/About.module.css";
 
@@ -31,6 +32,9 @@ const About = () => {
 
   return (
     <Container className={styles.container}>
+      <Helmet>
+        <link rel="canonical" href="https://www.thomasdomitrovic.com/about" />
+      </Helmet>
       <h1 className={styles.heading}>About Me</h1>
       <Row className="justify-content-center">
         <Col md={6}>
