@@ -21,14 +21,30 @@
 .skillCard {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
   background-color: #f8f9fa;
   border: none;
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cardBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
