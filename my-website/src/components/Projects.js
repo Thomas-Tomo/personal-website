@@ -18,6 +18,7 @@ import charadesImg from "../assets/images/charades.png";
 import woodlandWhispersRetreatImg from "../assets/images/woodland_whispers_retreat.png";
 import hangmanImg from "../assets/images/hangman.png";
 import capitalCitiesImg from "../assets/images/capital_cities.png";
+import personalWebsiteImg from "../assets/images/am-i-responsive.png";
 
 // Map GitHub repository names to image imports
 const projectImageMap = {
@@ -28,6 +29,7 @@ const projectImageMap = {
   "woodland-whispers-retreat": woodlandWhispersRetreatImg,
   hangman: hangmanImg,
   "capital-cities": capitalCitiesImg,
+  "personal-website": personalWebsiteImg,
 };
 
 // Function to get image by project name
@@ -51,6 +53,7 @@ const Projects = () => {
           "woodland-whispers-retreat",
           "hangman",
           "capital-cities",
+          "personal-website",
         ].includes(repo.name)
       );
 
